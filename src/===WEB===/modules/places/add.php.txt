@@ -1,0 +1,114 @@
+<div class="main">
+            <form action="" method="post">   
+	<main role="main" class="container" style="margin-left: 270px;background: #fff">
+	<div class="alert alert-<?php echo $msg_class;?>" style="display:<?php echo $msg_visible;?>; width: 50%"><?php echo $msg;?></div>
+	<?php //if($page != ""){include "$w/edit.php";}?>
+	<section class="container">
+			
+			<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#one">Základní informace</a>
+    </li>
+  </ul>
+  
+  
+  <div class="alert alert-<?php echo $msg_class?>" role="alert" style="<?php echo $msg_visible;?>">
+              <?php echo $msg; ?>
+                </div>
+  
+  
+  <div class="container border-right border-bottom border-left">
+  <br>
+  <div class="tab-content">
+<!--           <p><?php //echo $datetime;?></p>-->             
+                <div class="bg-white tab-pane active" id="one">
+                        <label for="page_name">Název stránky:</label>
+            <br>
+			    <input type="text" id="page_name"  name="page_name" style="width: 50%" onkeyup="">
+			    <br>
+                <label for="page_name">Identifikátor:</label>
+                <br>
+			    <input type="text" id="page_identifier"  name="page_identifier" style="width: 50%">
+               <button onclick="identifierGenerate" role="button">Vygenerovat</button>
+                <br>
+                <br>
+                </div>
+            <hr style="width:100%">
+                   <div class="container">
+                    <input type="submit" name="submit" class="btn btn-primary" value="Uložit">
+                    
+                   <input type="submit" name="back" class="btn btn-danger" value="Zrušit">     
+                   </div>
+               
+                </div>
+                 <br>
+                  </div>
+		</section>
+		<br>
+	</main>
+      </form>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+	<script>
+	$('.navbar-nav>li>a').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
+	});
+	//window.addEventListener("hashchange", function() { scrollBy(0, -50) })
+        
+        
+        var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+	var shiftWindow = function() { scrollBy(0, -60) };
+	if (location.hash) shiftWindow();
+	window.addEventListener("hashchange", shiftWindow);
+        
+        function identifier(){
+            let input = document.querySelector("#page_name").value;
+            let result = input.replace(" ","-").replace("ě","e").replace("š","s").replace("č","c").replace("ř","r").replace("ž","z").replace("ý","y").replace("á","a").replace("í","i").replace("é","e").replace("ú","u").replace("ů","u");
+            
+            document.querySelector("#page_identifier").value = result.toLowerCase();
+        }
+        function identifierGenerate(){
+            let input = document.querySelector("#page_identifier").value;
+            let result = input.replace(" ","-").replace("ě","e").replace("š","s").replace("č","c").replace("ř","r").replace("ž","z").replace("ý","y").replace("á","a").replace("í","i").replace("é","e").replace("ú","u").replace("ů","u");
+            
+            document.querySelector("#page_identifier").value = result.toLowerCase();
+        }
+        
+
+            <?php include '../js/tinymce/tinymce.define.min.js'?>
+        
+    document.querySelector(".tox-promotion-link").style.display = "none";
+	</script>
+	<script>
+    <?php
+    
+    echo "var id = $id";
+    
+    include 'dist/page-script.js'; 
+        
+    ?>
+    </script>
+</body>
+</html>

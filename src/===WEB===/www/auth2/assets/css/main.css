@@ -1,0 +1,188 @@
+html{
+margin:0;
+padding:0;
+
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+/* body {
+	 padding-top: 70px; 
+	background: url('../files/img/technology-1283624.jpg') center top;
+	background-size: cover;
+}
+.fm{
+    padding-top: 35px;
+	background: url('../files/img/technology-1283624.jpg') center top;
+	background-size: cover;
+} */
+/*#box{
+    box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 1px 20px -6px rgba(0,0,0,0.44);
+}*/
+
+/*
+address span {
+  
+}*/
+
+.card {margin-bottom: 2rem;}
+
+.pallete-11 {background-color: #FCBD00}
+.pallete-12 {background-color: #2D7DD2}
+.pallete-13 {background-color: #97CC04}
+.pallete-14 {background-color: #F45D01}
+.pallete-15 {background-color: #474647}
+.bgimg {
+  background-image: url('/files/img/technology-1283624.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding:20px 60px 20px 60px;
+background: #000;
+}
+
+hr {
+  margin: auto;
+  /*width: 40%;*/
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.users {
+    max-height: 250px;
+    overflow-y: scroll;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+    width: 25%;
+}
+.container{
+    background: none;
+    background-color: none;
+}
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-attachment: fixed;
+  background-size: cover;
+}
+/*.main{
+  padding-top: 15px;
+  padding-right: 300px; 
+}*/
+.action-link{
+    border: none;
+    background: none;
+/*    color: #4663ff;*/
+    text-decoration: underline;
+}
+.card .card-header{
+  background-color: #fff;
+}
