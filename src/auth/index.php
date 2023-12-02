@@ -80,19 +80,19 @@ if(isset($_POST['submit'])){
         <div class="form-group">
           <label class="control-label col-sm-2" for="alias">Alias/web:</label>
           <div class="col-sm-10">
-            <input name="alias" type="text" class="form-control" id="alias" placeholder="Zadejte alias webu">
+            <input name="alias" type="text" class="form-control" id="alias" placeholder="Zadejte alias webu" required>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-2" for="username">Uživatel:</label>
           <div class="col-sm-10">
-            <input name="username" type="text" class="form-control" id="username" placeholder="Zadejte uživatelské jméno">
+            <input name="username" type="text" class="form-control" id="username" placeholder="Zadejte uživatelské jméno" required>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-2" for="pwd">Heslo:</label>
           <div class="col-sm-10">
-            <input name="pass" type="password" class="form-control" id="pwd" placeholder="Zadejte heslo">
+            <input name="pass" type="password" class="form-control" id="pwd" placeholder="Zadejte heslo" required>
           </div>
         </div>
         <div class="form-group">
